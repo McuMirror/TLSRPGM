@@ -34,12 +34,12 @@ The firmware for the module works with all types of TLSR82xx chips via SWM-SWS c
 ```
 usage: TlsrPgm [-h] [-p PORT] [-b BAUD] [-t TRST] [-a ACT] [-z ZW] [-s] [-c]
                [-r] [-g] [-m] [-d DIV] [-o OSWS] [-u] [-w]
-               {rf,we,wf,es,ea,fsr,fsw,rs,ws,wsb,wsw,wsd,ra,ro,wa,i,ds,df,da,do,dc,sws} ...
+               {rf,we,wf,es,ea,fsr,fsw,rs,ws,wsb,wsw,wsd,bkp,stp,ra,ro,wa,i,ds,df,da,do,dc,sws} ...
 
-TLSR82xx TlsrPgm version 13.04.26
+TLSR82xx TlsrPgm version 26.04.26
 
 positional arguments:
-  {rf,we,wf,es,ea,fsr,fsw,rs,ws,wsb,wsw,wsd,ra,ro,wa,i,ds,df,da,do,dc,sws}
+  {rf,we,wf,es,ea,fsr,fsw,rs,ws,wsb,wsw,wsd,bkp,stp,ra,ro,wa,i,ds,df,da,do,dc,sws}
                         Run TlsrPgm {command} -h for additional help
     rf                  Read Flash to binary file
     we                  Write file to Flash with sectors erases
@@ -53,6 +53,8 @@ positional arguments:
     wsb                 Write byte to Swire addres
     wsw                 Write 16-bit word to Swire address
     wsd                 Write 32-bit word to Swire address
+    bkp                 Set break-point address (TLSR825x)
+    stp                 CPU Step
     ra                  Read Analog Registers to binary file
     ro                  Read TLSR8208 OTP to binary file
     wa                  Write file to Analog Registers
@@ -60,7 +62,7 @@ positional arguments:
     ds                  Dump Swire (Registers or SRAM)
     df                  Dump Flash
     da                  Dump Analog Registers
-    do                  Dump TLSR8208 OTP register
+    do                  Dump TLSR8208 OTP registers
     dc                  Show uit32 register or SRAM addres
     sws                 SWS Printf (PGM version >= 0.0.0.4 is used)
 
